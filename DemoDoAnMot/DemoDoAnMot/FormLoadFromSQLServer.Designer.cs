@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvUsersBegin = new System.Windows.Forms.DataGridView();
             this.dgvBangMaHoa = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,7 +57,7 @@
             this.dgvUsersBegin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsersBegin.Location = new System.Drawing.Point(3, 20);
             this.dgvUsersBegin.Name = "dgvUsersBegin";
-            this.dgvUsersBegin.Size = new System.Drawing.Size(574, 187);
+            this.dgvUsersBegin.Size = new System.Drawing.Size(864, 266);
             this.dgvUsersBegin.TabIndex = 13;
             // 
             // dgvBangMaHoa
@@ -68,34 +65,18 @@
             this.dgvBangMaHoa.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBangMaHoa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBangMaHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBangMaHoa.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBangMaHoa.Location = new System.Drawing.Point(6, 20);
             this.dgvBangMaHoa.Name = "dgvBangMaHoa";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBangMaHoa.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvBangMaHoa.Size = new System.Drawing.Size(334, 252);
+            this.dgvBangMaHoa.Size = new System.Drawing.Size(334, 380);
             this.dgvBangMaHoa.TabIndex = 14;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvUsersBegin);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(15, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(580, 210);
+            this.groupBox1.Size = new System.Drawing.Size(870, 289);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dữ Liệu Users Facebook";
@@ -116,16 +97,16 @@
             this.groupBox2.Controls.Add(this.btnLoadUserBegin);
             this.groupBox2.Controls.Add(this.dgvBangMaHoa);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(599, 12);
+            this.groupBox2.Location = new System.Drawing.Point(894, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(346, 423);
+            this.groupBox2.Size = new System.Drawing.Size(346, 554);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bảng Mã Hóa Dữ Liệu";
             // 
             // btnLoadBangMaHoa
             // 
-            this.btnLoadBangMaHoa.Location = new System.Drawing.Point(178, 317);
+            this.btnLoadBangMaHoa.Location = new System.Drawing.Point(178, 440);
             this.btnLoadBangMaHoa.Name = "btnLoadBangMaHoa";
             this.btnLoadBangMaHoa.Size = new System.Drawing.Size(162, 48);
             this.btnLoadBangMaHoa.TabIndex = 21;
@@ -135,7 +116,7 @@
             // 
             // btnMaHoaUsers
             // 
-            this.btnMaHoaUsers.Location = new System.Drawing.Point(57, 371);
+            this.btnMaHoaUsers.Location = new System.Drawing.Point(57, 494);
             this.btnMaHoaUsers.Name = "btnMaHoaUsers";
             this.btnMaHoaUsers.Size = new System.Drawing.Size(239, 46);
             this.btnMaHoaUsers.TabIndex = 20;
@@ -146,7 +127,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 286);
+            this.label1.Location = new System.Drawing.Point(6, 409);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(157, 18);
             this.label1.TabIndex = 19;
@@ -155,14 +136,14 @@
             // cbBangMa
             // 
             this.cbBangMa.FormattingEnabled = true;
-            this.cbBangMa.Location = new System.Drawing.Point(169, 283);
+            this.cbBangMa.Location = new System.Drawing.Point(169, 406);
             this.cbBangMa.Name = "cbBangMa";
             this.cbBangMa.Size = new System.Drawing.Size(171, 26);
             this.cbBangMa.TabIndex = 18;
             // 
             // btnLoadUserBegin
             // 
-            this.btnLoadUserBegin.Location = new System.Drawing.Point(9, 317);
+            this.btnLoadUserBegin.Location = new System.Drawing.Point(9, 440);
             this.btnLoadUserBegin.Name = "btnLoadUserBegin";
             this.btnLoadUserBegin.Size = new System.Drawing.Size(163, 48);
             this.btnLoadUserBegin.TabIndex = 17;
@@ -174,9 +155,9 @@
             // 
             this.groupBox3.Controls.Add(this.dgvUsersEnd);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(13, 228);
+            this.groupBox3.Location = new System.Drawing.Point(15, 307);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(580, 210);
+            this.groupBox3.Size = new System.Drawing.Size(873, 259);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Dữ Liệu Users Facebook Sau Khi Được Mã Hóa";
@@ -186,25 +167,17 @@
             this.dgvUsersEnd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUsersEnd.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUsersEnd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUsersEnd.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUsersEnd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvUsersEnd.Location = new System.Drawing.Point(3, 20);
             this.dgvUsersEnd.Name = "dgvUsersEnd";
-            this.dgvUsersEnd.Size = new System.Drawing.Size(574, 187);
+            this.dgvUsersEnd.Size = new System.Drawing.Size(867, 236);
             this.dgvUsersEnd.TabIndex = 13;
             // 
             // FormLoadFromSQLServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 451);
+            this.ClientSize = new System.Drawing.Size(1252, 578);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

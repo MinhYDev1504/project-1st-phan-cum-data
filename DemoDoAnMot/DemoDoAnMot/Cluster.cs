@@ -27,7 +27,8 @@ namespace DemoDoAnMot
         //Properties
         public List<EncryptedUser> ListUsers { get => listUsers; set => listUsers = value; }
         public EncryptedUser CenterUser { get => centerUser; set => centerUser = value; }
-        // ==>User ảo với các thuộc tính là trung bình cộng của các giá trị cùng thuộc tính của các User có trong list
+        /*User ảo với các thuộc tính là trung bình cộng của các giá trị cùng thuộc tính 
+        của các User có trong list*/
         public EncryptedUser AverageUser { get { return new EncryptedUser(ListUsers.Average(a=>a.Sex),
             ListUsers.Average(a => a.Age),
             ListUsers.Average(a => a.Birthday),
@@ -37,7 +38,8 @@ namespace DemoDoAnMot
             ListUsers.Average(a => a.LoveStatus),
             ListUsers.Average(a => a.Followers)); } }
         //==> Khoảng thay đổi giữa Center cũ và Center mới sẽ được cập nhật vào lần kế tiếp
-        public double Change { get {return new AlgorithmKmeans().distanceTwoRecords(AverageUser,CenterUser); }}
+        public double Change { get
+            { return new AlgorithmKmeans().distanceTwoRecords(AverageUser,CenterUser); }}
 
         //-----------Methods------------
         //==> Hàm cập nhật Center sau mỗi lượt chạy thuật toán
