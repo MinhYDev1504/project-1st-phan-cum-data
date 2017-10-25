@@ -77,7 +77,6 @@ namespace DemoDoAnMot
                 //--AutoSizeColumns For DataGridView
                 dgvListOfCluster.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
                 */
-                
             }
             catch (SqlException e)
             {

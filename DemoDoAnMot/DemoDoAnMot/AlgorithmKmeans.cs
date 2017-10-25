@@ -11,6 +11,7 @@ namespace DemoDoAnMot
         //Khai Báo Biến
         private List<EncryptedUser> listAllUsers;   // ==>List các User cần phân cụm
         private int k;                              // ==>k: Số cụm sẽ được phân thành
+        public List<Cluster> ListClusters = new List<Cluster>();// ==> List chứa các cụm Cluster được phân cụm ra
 
         //Constructors
         public AlgorithmKmeans(List<EncryptedUser> listAllUsers, int k)
@@ -27,24 +28,20 @@ namespace DemoDoAnMot
         //Properties
         public List<EncryptedUser> ListAllUsers { get => listAllUsers; set => listAllUsers = value; }
         public int K { get => k; set => k = value; }
-        public List<Cluster> ListClusters = new List<Cluster>();
+
+        
 
         //Method (==>Thuật Toán K-mean<==)
         public List<Cluster> runAlgorithm()
         {
-            //Các Cluster được trả về sau khi chạy xong thuật toán phân cụm
             List<Cluster> Clusters = new List<Cluster>();
-
-            //Step 1: Chọn k centers cho k cluster theo quy luật hàng rào
-            GetCentersForClusters();
-
+            GetCentersForClusters();//==>Chọn k centers cho k cluster theo quy luật hàng rào
             //Step 2: Chạy vòng lặp thuật toán K-means
             do
             {
-                //--Cập nhật lại trung tâm cụm và xóa list trong cụm để phân nhóm lại các dữ liệu cho các cụm
+                //--Cập nhật lại trung tâm cụm và xóa list trong cụm để phân nhóm lại các user cho các cụm
                 ListClusters.ForEach(c =>
                         { if (c.ListUsers.Count() != 0) { c.updateCenter(); c.ListUsers.Clear(); } });
-                
                 //--Dựa vào khoảng cách Euclide để góm các dữ liệu vào các cụm
                 //--Nếu khoảng cách của dữ liệu đến center của cụm nào nhỏ nhất thì dữ liệu thuộc cụm đó 
                 //--
@@ -63,11 +60,11 @@ namespace DemoDoAnMot
                     }
                     ListClusters[index].ListUsers.Add(u);
                 }
-                ListClusters.ForEach(c => c.getAverage());
-            } while (ListClusters.Sum(c => c.Change) > 10);
+            } while (ListClusters.Sum(c => c.Change) != 0);//--> trung bình cụm và center vẫn còn chênh lệch
              return Clusters;
         }
 
+        //Method Lấy k trung tâm cho k cụm theo quy tắc
         public void GetCentersForClusters()
         {
             var step = (int)(listAllUsers.Count() / K);
