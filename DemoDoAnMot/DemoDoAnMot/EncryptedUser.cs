@@ -9,7 +9,7 @@ namespace DemoDoAnMot
     public class EncryptedUser
     {
         //Fields
-        private double iDUser;      
+        private double iDUser;
         private String userName;
         private double sex;
         private double age;
