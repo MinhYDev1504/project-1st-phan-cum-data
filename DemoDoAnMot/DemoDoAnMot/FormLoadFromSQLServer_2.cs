@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace DemoDoAnMot
 {
-    public partial class FormLoadFromSQLServer : Form
+    public partial class FormLoadFromSQLServer_2 : Form
     {
         //--Variables
         string strConnectionString =
@@ -21,7 +21,7 @@ namespace DemoDoAnMot
         SqlConnection conn = null;
         SqlDataAdapter daTemp = null;
         DataTable dtTemp = null;
-        public FormLoadFromSQLServer()
+        public FormLoadFromSQLServer_2()
         {
             InitializeComponent();
         }
@@ -87,12 +87,12 @@ namespace DemoDoAnMot
             {
                 conn = new SqlConnection(strConnectionString);
                 daTemp = new SqlDataAdapter(
-                    "EXEC dbo.uspGetEncryptedUser", conn);
+                    "EXEC dbo.uspGetEncryptedBinaryUser", conn);
                 dtTemp = new DataTable();
                 dtTemp.Clear();
                 daTemp.Fill(dtTemp);
                 dgvUsersEnd.DataSource = dtTemp;
-                dgvUsersEnd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+                dgvUsersEnd.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             }
             catch (SqlException e)
             {
@@ -101,7 +101,7 @@ namespace DemoDoAnMot
             }
         }
 
-        private void FormLoadFromSQLServer_Load(object sender, EventArgs e)
+        private void FormLoadFromSQLServer_2_Load(object sender, EventArgs e)
         {
             //comboBox Chọn Loại Dữ Liệu
             cbBangMa.Items.Add("GioiTinh");

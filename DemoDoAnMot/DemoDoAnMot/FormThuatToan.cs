@@ -39,10 +39,13 @@ namespace DemoDoAnMot
 
         private void LoadDataToComboboxK()
         {
+            cbKValue.Items.Add(2);
             cbKValue.Items.Add(3);
             cbKValue.Items.Add(4);
             cbKValue.Items.Add(5);
-            cbKValue.SelectedItem=3;
+            cbKValue.Items.Add(6);
+            cbKValue.Items.Add(7);
+            cbKValue.SelectedItem=5;
         }
 
         // ==> Method Load Data (EncryptedUsers) From SQLServer To ListEUs Of Algorithm K-mean
@@ -90,6 +93,7 @@ namespace DemoDoAnMot
             this.k = Int32.Parse(cbKValue.SelectedItem.ToString());
             a = new AlgorithmKmeans(listEUs, k);
             a.runAlgorithm();
+            for (int i = 0; i < k; i++) a.ListClusters[i].CenterUser.UserName = "Nhóm " + i;
             dgvCenters.DataSource = new BindingSource(a.ListClusters.Select(c => c.CenterUser), null);
             dgvCenters.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
@@ -105,6 +109,12 @@ namespace DemoDoAnMot
         private void btnShowOriginalData_Click(object sender, EventArgs e)
         {
             var form = new FormLoadFromSQLServer();
+            form.ShowDialog();
+        }
+
+        private void btnShowOriginalData2_Click(object sender, EventArgs e)
+        {
+            var form = new FormLoadFromSQLServer_2();
             form.ShowDialog();
         }
     }
