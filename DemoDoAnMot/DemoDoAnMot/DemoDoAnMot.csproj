@@ -48,14 +48,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlgorithmKmeans.cs" />
-    <Compile Include="Cluster.cs" />
-    <Compile Include="EncryptedUser.cs" />
+    <Compile Include="Classes\AlgorithmKmeans.cs" />
+    <Compile Include="Classes\Cluster.cs" />
+    <Compile Include="Classes\EncryptedUser.cs" />
     <Compile Include="FormDuLieuLoadExcel.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormDuLieuLoadExcel.Designer.cs">
       <DependentUpon>FormDuLieuLoadExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadFromSQLServer_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadFromSQLServer_2.Designer.cs">
+      <DependentUpon>FormLoadFromSQLServer_2.cs</DependentUpon>
     </Compile>
     <Compile Include="FormThuatToan.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormDuLieuLoadExcel.resx">
       <DependentUpon>FormDuLieuLoadExcel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadFromSQLServer_2.resx">
+      <DependentUpon>FormLoadFromSQLServer_2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThuatToan.resx">
       <DependentUpon>FormThuatToan.cs</DependentUpon>
