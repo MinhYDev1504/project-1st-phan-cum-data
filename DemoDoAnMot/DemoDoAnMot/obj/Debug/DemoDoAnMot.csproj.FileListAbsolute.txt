@@ -11,3 +11,4 @@ E:\[Đồ Án Tham Khảo]\DoAnMot\DemoDoAnMot\DemoDoAnMot\obj\Debug\DemoDoAnMot
 E:\[Đồ Án Tham Khảo]\DoAnMot\DemoDoAnMot\DemoDoAnMot\obj\Debug\DemoDoAnMot.frmThuatToan.resources
 E:\[Đồ Án Tham Khảo]\DoAnMot\DemoDoAnMot\DemoDoAnMot\obj\Debug\DemoDoAnMot.FormLoadFromSQLServer.resources
 E:\[Đồ Án Tham Khảo]\DoAnMot\DemoDoAnMot\DemoDoAnMot\obj\Debug\DemoDoAnMot.FormLoadFromSQLServer_2.resources
+E:\[Đồ Án Tham Khảo]\DoAnMot\DemoDoAnMot\DemoDoAnMot\obj\Debug\DemoDoAnMot.FormThuatToan_2.resources

@@ -16,7 +16,8 @@ namespace DemoDoAnMot
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThuatToan());
+            Application.Run(new FormThuatToan_2());
+
         }
     }
 }

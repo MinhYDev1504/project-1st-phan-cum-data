@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbKValue = new System.Windows.Forms.ComboBox();
@@ -44,7 +44,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnStartAlgorithm = new System.Windows.Forms.Button();
             this.txtSelectedCluster = new System.Windows.Forms.TextBox();
-            this.btnShowOriginalData2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCenters)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -56,11 +55,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(385, 9);
+            this.label1.Location = new System.Drawing.Point(266, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(484, 29);
+            this.label1.Size = new System.Drawing.Size(784, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Phân Cụm Dữ Liệu Với Thuật Toán K-means";
+            this.label1.Text = "Phân Cụm Dữ Liệu Với Thuật Toán K-means Dùng Khoảng Cách Euclide";
             // 
             // label2
             // 
@@ -93,14 +92,14 @@
             // dgvCenters
             // 
             this.dgvCenters.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCenters.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCenters.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCenters.Location = new System.Drawing.Point(16, 165);
             this.dgvCenters.Name = "dgvCenters";
             this.dgvCenters.Size = new System.Drawing.Size(500, 173);
@@ -109,7 +108,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnShowOriginalData2);
             this.groupBox1.Controls.Add(this.btnShowOriginalData);
             this.groupBox1.Controls.Add(this.dgvUsers);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -209,16 +207,6 @@
             this.txtSelectedCluster.TabIndex = 11;
             this.txtSelectedCluster.Text = "Nhóm 1";
             // 
-            // btnShowOriginalData2
-            // 
-            this.btnShowOriginalData2.Location = new System.Drawing.Point(290, 400);
-            this.btnShowOriginalData2.Name = "btnShowOriginalData2";
-            this.btnShowOriginalData2.Size = new System.Drawing.Size(277, 57);
-            this.btnShowOriginalData2.TabIndex = 2;
-            this.btnShowOriginalData2.Text = "Xem Dữ Liệu Được Mã Hóa Khi Dùng Khoảng Cách Cosine";
-            this.btnShowOriginalData2.UseVisualStyleBackColor = true;
-            this.btnShowOriginalData2.Click += new System.EventHandler(this.btnShowOriginalData2_Click);
-            // 
             // frmThuatToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +255,5 @@
         private System.Windows.Forms.Button btnStartAlgorithm;
         private System.Windows.Forms.TextBox txtSelectedCluster;
         private System.Windows.Forms.Button btnShowOriginalData;
-        private System.Windows.Forms.Button btnShowOriginalData2;
     }
 }

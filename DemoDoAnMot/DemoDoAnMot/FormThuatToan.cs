@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DemoDoAnMot.Classes_Kmeans_1;
 
 namespace DemoDoAnMot
 {
@@ -109,12 +110,6 @@ namespace DemoDoAnMot
         private void btnShowOriginalData_Click(object sender, EventArgs e)
         {
             var form = new FormLoadFromSQLServer();
-            form.ShowDialog();
-        }
-
-        private void btnShowOriginalData2_Click(object sender, EventArgs e)
-        {
-            var form = new FormLoadFromSQLServer_2();
             form.ShowDialog();
         }
     }
